@@ -1,0 +1,167 @@
+@use "sass:color";
+
+$colors: (
+  'primary-1': (
+    '100': #caf0f8,
+    '200': #90e0ef,
+    '300': #00b4d8,
+    '400': #0b194d,
+    '500': #001238,
+
+    'transparent': (
+      '8': color.adjust(#0b194d, $alpha: -0.92),
+      '16': color.adjust(#0b194d, $alpha: -0.84),
+      '24': color.adjust(#0b194d, $alpha: -0.76),
+      '32': color.adjust(#0b194d, $alpha: -0.68),
+      '40': color.adjust(#0b194d, $alpha: -0.60),   
+      '48': color.adjust(#0b194d, $alpha: -0.52),
+      '64': color.adjust(#0b194d, $alpha: -0.36),
+    ),
+  ),
+
+  'primary-2': (
+    '100': #f1fefb,
+    '200': #c9ede4,
+    '300': #02cd90,
+    '400': #019370,
+
+    'transparent': (
+      '8': color.adjust(#02cd90, $alpha: -0.92),
+      '16': color.adjust(#02cd90, $alpha: -0.84),
+      '24': color.adjust(#02cd90, $alpha: -0.76),
+      '32': color.adjust(#02cd90, $alpha: -0.68),
+      '40': color.adjust(#02cd90, $alpha: -0.60), 
+      '48': color.adjust(#02cd90, $alpha: -0.52),
+    ),
+  ),
+
+  'basic': (
+    '100': #ffffff,
+    '200': #f7f8fc,
+    '200-a': #f0f3f6,
+    '300': #e9ecef,
+    '400': #dee2e6,
+    '500': #ced4da,
+    '600': #adb5bd,
+    '700': #6c757d,
+    '700-a': #5c6266, 
+    '800': #495057,
+    '900': #343a40,
+    '1000': #212529,
+    '1100': #000000,
+
+    'transparent': (
+      '8': color.adjust(#adb5bd, $alpha: -0.92),
+      '16': color.adjust(#adb5bd, $alpha: -0.84),
+      '20': color.adjust(#adb5bd, $alpha: -0.80),
+      '32': color.adjust(#adb5bd, $alpha: -0.68),
+      '40': color.adjust(#adb5bd, $alpha: -0.60),
+      '48': color.adjust(#adb5bd, $alpha: -0.52),
+    ),
+
+    'transparent-100': (
+      '8': color.adjust(#ffffff, $alpha: -0.92),
+      '16': color.adjust(#ffffff, $alpha: -0.84),
+      '24': color.adjust(#ffffff, $alpha: -0.76),
+      '32': color.adjust(#ffffff, $alpha: -0.68),
+      '40': color.adjust(#ffffff, $alpha: -0.60),   
+      '48': color.adjust(#ffffff, $alpha: -0.52),
+    ),
+  ),
+
+  'cerulean-blue': (
+    '100': #dbe6fa,
+    '200': #789ce2,
+    '300': #1d56cc,
+    '400': #143d8f,
+
+    'transparent': (
+      '8': color.adjust(#1d56cc, $alpha: -0.92),
+      '16': color.adjust(#1d56cc, $alpha: -0.84),
+      '24': color.adjust(#1d56cc, $alpha: -0.76),
+      '32': color.adjust(#1d56cc, $alpha: -0.68),
+      '40': color.adjust(#1d56cc, $alpha: -0.60),
+      '48': color.adjust(#1d56cc, $alpha: -0.52),
+    ),
+  ),
+
+  'slate-blue': (
+    '100': #e4e2f3,
+    '200': #a39cd7,
+    '300': #6156bb,
+    '400': #4b40a0,
+
+    'transparent': (
+      '8': color.adjust(#6156bb, $alpha: -0.92),
+      '16': color.adjust(#6156bb, $alpha: -0.84),
+      '24': color.adjust(#6156bb, $alpha: -0.76),
+      '32': color.adjust(#6156bb, $alpha: -0.68),
+      '40': color.adjust(#6156bb, $alpha: -0.60),
+      '48': color.adjust(#6156bb, $alpha: -0.52),
+    ),
+  ),
+
+  'golden-poppy': (
+    '100': #fff6d5,
+    '200': #ffde6c,
+    '300': #f4bf01,
+    '400': #b78f01,
+
+    'transparent': (
+      '8': color.adjust(#f4bf01, $alpha: -0.92),
+      '16': color.adjust(#f4bf01, $alpha: -0.84),
+      '24': color.adjust(#f4bf01, $alpha: -0.76),
+      '32': color.adjust(#f4bf01, $alpha: -0.68),
+      '40': color.adjust(#f4bf01, $alpha: -0.60),
+      '48': color.adjust(#f4bf01, $alpha: -0.52),
+    ),
+  ),
+
+  'magenta': (
+    '100': #fdd8eb,
+    '200': #c9719f,
+    '300': #d40c74,
+    '400': #950952,
+
+    'transparent': (
+      '8': color.adjust(#d40c74, $alpha: -0.92),
+      '16': color.adjust(#d40c74, $alpha: -0.84),
+      '24': color.adjust(#d40c74, $alpha: -0.76),
+      '32': color.adjust(#d40c74, $alpha: -0.68),
+      '40': color.adjust(#d40c74, $alpha: -0.60),
+      '48': color.adjust(#d40c74, $alpha: -0.52),
+    ),
+  ),
+
+  'blaze-orange': (
+    '100': #fde4d8,
+    '200': #f8a479,
+    '300': #f26419,
+    '400': #c14b0b,
+
+    'transparent': (
+      '8': color.adjust(#f26419, $alpha: -0.92),
+      '16': color.adjust(#f26419, $alpha: -0.84),
+      '24': color.adjust(#f26419, $alpha: -0.76),
+      '32': color.adjust(#f26419, $alpha: -0.68),
+      '40': color.adjust(#f26419, $alpha: -0.60),
+      '48': color.adjust(#f26419, $alpha: -0.52),
+    ),
+  ),
+
+  'phlox': (
+    '100': #f5d6ff,
+    '200': #e285ff,
+    '300': #cf33ff,
+    '400': #ac00e0,
+
+    'transparent': (
+      '8': color.adjust(#cf33ff, $alpha: -0.92),
+      '16': color.adjust(#cf33ff, $alpha: -0.84),
+      '24': color.adjust(#cf33ff, $alpha: -0.76),
+      '32': color.adjust(#cf33ff, $alpha: -0.68),
+      '40': color.adjust(#cf33ff, $alpha: -0.60),
+      '48': color.adjust(#cf33ff, $alpha: -0.52),
+    ),
+  ),
+);

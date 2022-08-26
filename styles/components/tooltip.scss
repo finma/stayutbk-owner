@@ -1,0 +1,15 @@
+@use '../partials/colors';
+@use '../partials/typography';
+
+.ant-tooltip-arrow-content {
+  --antd-arrow-background-color: unset;
+  background-color: map-get(colors.$colors, 'primary-1', '400');
+}
+
+.ant-tooltip-inner {
+  @include typography.c1;
+
+  border-radius: 4px;
+  padding: 16px;
+  background-color: map-get(colors.$colors, 'primary-1', '400');
+}

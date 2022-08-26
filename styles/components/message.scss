@@ -1,0 +1,45 @@
+@use '../partials/colors';
+
+.ant-message {
+  bottom: 24px;
+  left: 24px;
+  top: unset;
+
+  .ant-message-notice {
+    margin-top: 16px;
+    padding: 0;
+    text-align: left;
+
+    .ant-message-notice-content {
+      border-radius: 6px;
+      padding: 0;
+      font-size: 16px;
+      // background-color:  map-get(colors.$colors, 'cerulean-blue', '300');
+      color: map-get(colors.$colors, 'basic', '100');
+      
+      .ant-message-custom-content.ant-message-info {
+        border-radius: 6px;
+        padding: 16px;
+        background-color:  map-get(colors.$colors, 'cerulean-blue', '300');
+
+        svg {
+          margin-right: 16px;
+          vertical-align: top;
+          fill: map-get(colors.$colors, 'basic', '100');
+        }
+      }
+
+      .ant-message-custom-content.ant-message-error {
+        border-radius: 6px;
+        padding: 16px;
+        background-color:  map-get(colors.$colors, 'magenta', '300');
+
+        svg {
+          margin-right: 16px;
+          vertical-align: top;
+          fill: map-get(colors.$colors, 'basic', '100');
+        }
+      }
+    }
+  }
+}

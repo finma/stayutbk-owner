@@ -1,0 +1,258 @@
+@use '../partials/colors';
+@use '../partials/typography';
+
+.ant-table-wrapper {
+  border-radius: 6px;
+  padding: 24px;
+  background-color: map-get(colors.$colors, 'basic', '100');
+  &.table-p0 {
+    padding: 0
+  }
+}
+
+tr {
+  &.ant-table-expanded-row,
+  &.ant-table-expanded-row:hover {
+    > td {
+      background-color: map-get(colors.$colors, 'basic', '200');
+      box-shadow: 0 1px 0 0 map-get(colors.$colors, 'basic', '300');
+      border-bottom: none;
+    }
+  }
+  
+  &.ant-table-expanded-row {
+    tr th {
+      background: map-get(colors.$colors, 'basic', '300');
+    }
+  }
+}
+
+.ant-table-thead {
+  tr {
+    th {
+      @include typography.s1;
+
+      border-bottom: none;
+      border-right: 1px solid map-get(colors.$colors, 'basic', '300');
+      background-color: map-get(colors.$colors, 'basic', '200');
+      color: map-get(colors.$colors, 'primary-1', '500');
+
+      &::before {
+        display: none;
+      }
+      
+      &:first-child {
+        border-top-left-radius: 6px !important;
+        border-bottom-left-radius: 6px !important;
+      }
+
+      &:last-child {
+        border-right: none;
+        border-top-right-radius: 6px !important;
+        border-bottom-right-radius: 6px !important;
+      }
+      
+      &.ant-table-row-expand-icon-cell {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.ant-table-cell {
+  svg {
+    path:last-child {
+      fill: map-get(colors.$colors, 'basic', '600');
+    }
+    
+    &.edit {
+      path:last-child {
+        fill: map-get(colors.$colors, 'cerulean-blue', '300');
+      }
+    }
+  }
+
+  &.editable {
+    padding: 6px;
+  }
+}
+
+.ant-table-tbody {
+  color: map-get(colors.$colors, 'basic', '700-a');
+
+  .pending {
+    @include typography.c2;
+
+    border: 1px solid map-get(colors.$colors, 'golden-poppy', '300');
+    border-radius: 4px;
+    padding: 6px 12px;
+    color: map-get(colors.$colors, 'golden-poppy', '300');
+  }
+
+  .resend {
+    @include typography.s1;
+
+    display: block;
+    padding: 0;
+    color: map-get(colors.$colors, 'cerulean-blue', '300');
+    
+    span {
+      text-decoration: underline;
+    }
+  }
+  
+  tr {
+    &.ant-table-row {
+      &.ant-table-row-level-1 {
+        background-color: map-get(colors.$colors, 'basic', '200')
+      }
+    }
+
+    td {
+      &.ant-table-row-expand-icon-cell {
+        padding: 0;
+        padding-left: 7px;
+        svg {
+          path:last-child {
+            fill: map-get(colors.$colors, 'basic', '800');
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-table-pagination {
+  align-items: center;
+  margin: 0 !important;
+  margin-top: 24px !important;
+  color: map-get(colors.$colors, 'basic', '700-a');
+
+  .ant-pagination-total-text {
+    border-right: 1px solid map-get(colors.$colors, 'basic', '300');
+    margin-right: 24px;
+    padding-right: 20px;
+    order: -2;
+  }
+
+  .ant-pagination-options {
+    margin-left: 0;
+    margin-right: auto;
+    order: -1;
+    
+    .ant-pagination-options-size-changer {
+      position: relative;
+      align-items: center;
+      &:after {
+        content: 'per page';
+        padding-left: 16px;
+        cursor: default;
+        position: absolute;
+        top: 7px;
+        right: -70px;
+      }
+    }
+
+    .ant-select-selector {
+      border: none;
+      border-radius: 6px;
+      height: 40px;
+      padding: 8px 16px;
+      background-color: #F9F9F9;
+
+      .ant-select-selection-item {
+        line-height: unset;
+        color: map-get(colors.$colors, 'basic', '700-a');
+      }
+    }
+  }
+
+  .ant-pagination-next,
+  .ant-pagination-prev {
+    height: 40px;
+    margin: 0;
+    padding: 0 8px;
+    
+    button {
+      border: none;
+    }
+  }
+  
+  .ant-pagination-item {
+    border: none;
+    height: 40px;
+    margin: 0;
+    padding: 5px 10px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+
+    a {
+      color: map-get(colors.$colors, 'basic', '700-a');
+    }
+
+    &.ant-pagination-item-active {
+      border-radius: 6px;
+      background-color: map-get(colors.$colors, 'cerulean-blue', '300');
+      
+      a {
+        color: map-get(colors.$colors, 'basic', '100');
+      }
+    }
+  }
+}
+
+.table-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.table-action-icon {
+  padding: 4px;
+  border-radius: 4px;
+  height: 26px;
+  width: 26px;
+  &:hover {
+    background: map-get(colors.$colors, 'basic', '200');
+  }
+  &.table-edit-icon {
+    path:last-child {
+      fill: map-get(colors.$colors, 'cerulean-blue', '300');
+    }
+  }
+  &.table-delete-icon {
+    path:last-child {
+      fill: map-get(colors.$colors, 'magenta', '300');
+    }
+  }
+}
+
+// Table Drag & Drop
+.row-dragging {
+  background: #fafafa;
+  width: 100%;
+  height: 40px;
+}
+
+.row-dragging td {
+  padding: 0;
+
+  &:nth-child(1) {
+    width: 48px;
+  }
+
+  @for $i from 2 through 9 {
+    &:nth-child(#{$i}) {
+      width: 110px;
+    }
+  }
+
+  &:nth-child(9) {
+    width: 82px;
+  }
+}
+
+.row-dragging .drag-visible {
+  visibility: visible;
+}

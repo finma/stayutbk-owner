@@ -1,0 +1,64 @@
+@use '../partials/colors';
+
+.ant-picker {
+  border-radius: 6px;
+  height: 40px;
+  width: 120px;
+  background-color: map-get(colors.$colors, 'basic', '200-a');
+  border-color: transparent;
+  box-shadow: none;
+
+  &:hover {
+    border-color: transparent;
+  }
+
+  .ant-picker-input {
+    .ant-picker-clear {
+      background-color: transparent;
+    }
+
+    .ant-picker-suffix {
+      svg {
+        fill: map-get(colors.$colors, 'basic', '600');
+      }
+    }
+  }
+}
+
+.policy-timePicker {
+  .ant-picker {
+    width: 100%;
+  }
+}
+
+.ant-picker-dropdown {
+  .ant-picker-panel-container {
+    border-radius: 6px;
+
+    .ant-picker-time-panel {
+      padding-top: 0;
+    }
+
+    .ant-picker-footer {
+      .ant-picker-ok {
+        button {
+          border-radius: 6px;
+          font-weight: bold;
+          background-color: map-get(colors.$colors, 'primary-1', '400');
+          border-color: transparent;
+          color: map-get(colors.$colors, 'basic', '100');
+        }
+      }
+    }
+  }
+}
+
+.ant-picker-time-panel-column
+  > li.ant-picker-time-panel-cell-selected
+  .ant-picker-time-panel-cell-inner,
+.ant-picker-time-panel-column
+  > li.ant-picker-time-panel-cell-selected
+  .ant-picker-time-panel-cell-inner:hover {
+  background-color: map-get(colors.$colors, 'primary-1', '400');
+  color: map-get(colors.$colors, 'basic', '100');
+}

@@ -1,0 +1,29 @@
+@use '../partials/colors';
+
+// The default background color is white
+// Add props overlayClassName='bg-dark' to use popover with dark background
+// Because there are some components that require a popover with white background or dark background
+
+.bg-dark {
+  .ant-popover-arrow-content {
+    transform: translateX(11px) rotate(-45deg);
+    background-color: map-get(colors.$colors, 'primary-1', '400');
+  }
+
+  .ant-popover-inner {
+    background-color: map-get(colors.$colors, 'primary-1', '400');
+    .ant-popover-inner-content {
+      color: map-get(colors.$colors, 'basic', '100');
+    }
+  }
+}
+
+.ant-popover {
+  .ant-popover-inner {
+    border-radius: 8px;
+    
+    .ant-popover-inner-content {
+      padding: 12px;
+    }
+  }
+}

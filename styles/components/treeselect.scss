@@ -1,0 +1,168 @@
+@use '../partials/colors';
+
+// Custom select tree
+.ant-tree-select {
+  &.simple-tag {
+    .ant-select-selection-item {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      margin-inline-end: 0;
+      border-radius: none;
+      span {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.ant-tree-select-dropdown {
+  
+  // Ant tree without line
+  // Add property dropdownClassName="hide-line" in TreeSelect component
+  // To: hide the tree line, based on invision design
+  &.hide-line {
+    .ant-select-tree-switcher-leaf-line {
+      display: none;
+    }
+    .ant-select-tree-indent-unit {
+      &:before {
+        content: none;
+      }
+    }
+  }
+  
+  // Custom styling switcher / expand icon
+  .ant-select-tree-switcher {
+    &:not(.ant-select-tree-switcher-noop) {
+      margin-right: 9px;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      path:last-child {
+        fill: map-get(colors.$colors, 'basic', '600');
+      }
+    }
+  }
+  
+  .ant-select-tree-indent-unit {
+    width: 20px;
+    height: 20px;
+  }
+  
+  // ===== Custom checkbox =====
+  .ant-select-tree-checkbox {
+    margin: 0;
+  }
+  
+  .ant-select-tree-checkbox-indeterminate {
+    .ant-select-tree-checkbox-inner {
+      &:after {
+        background: map-get(colors.$colors, 'cerulean-blue', '300')
+      }
+    }
+  }
+  
+  .ant-select-tree-checkbox-inner {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: map-get(colors.$colors, 'basic', '200-a');
+  }
+  .ant-select-tree-checkbox-checked {
+    .ant-select-tree-checkbox-inner {
+      background-color: map-get(colors.$colors, 'cerulean-blue', '300');
+      &:after {
+        left: 28.5%;
+      }
+    }
+  }
+  // ===== End custom checkbox =====
+  
+  .ant-select-tree {
+    .ant-select-tree-treenode {
+      padding: 8px 16px;
+    }
+    .ant-select-tree-node-content-wrapper {
+      padding: 0 0 0 10px;
+      bottom: 2px;
+    }
+    .ant-select-tree-title {
+      font-size: 14px;
+      line-height: 22px;
+      color: map-get(colors.$colors, 'basic', '700-a');
+    }
+    
+    // Select tree as section
+    // Add className="tree-section" in TreeNode to make it a section
+    // And add disabled to make it not clickable
+    .tree-section {
+      padding: 8px 16px;
+      .ant-select-tree-switcher,
+      .ant-select-tree-checkbox {
+        display: none;
+      }
+      .ant-select-tree-node-content-wrapper {
+        cursor: default;
+        padding: 0;
+      }
+      .ant-select-tree-title {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: bold;
+        color: map-get(colors.$colors, 'basic', '700-a');
+        opacity: 0.4;
+      }
+    }
+    
+    // Custom styling for select all node / any node you want to remove the switcher
+    // To: Remove the switcher from the select all node
+    // Attention: Always open the switcher by default if you want to add this custom class
+    // Otherwise you can't expand the section
+    .tree-remove-switcher {
+      .ant-select-tree-switcher {
+        display: none;
+      }
+    }
+    
+    // Custom styling for parent tree node / any node you want to remove the indent
+    // To: Remove all indent for this node
+    .tree-remove-indent {
+      .ant-select-tree-indent {
+        display: none;
+      }
+      
+      // Only remove first indent
+      &-first {
+        .ant-select-tree-indent .ant-select-tree-indent-unit:first-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Custom style for hide the tag item
+.hide-tag {
+  &.ant-select.ant-select-multiple {
+    .ant-select-selector {
+      padding: 0 16px;
+      overflow: hidden;
+    }
+
+    .ant-select-selection-item {
+      margin: 0;
+      background-color: map-get(colors.$colors, 'basic', '200-a');
+    }
+
+    .ant-select-selection-item-remove {
+      display: none;
+    }
+
+    .ant-select-selection-overflow {
+      flex-wrap: nowrap;
+    }
+  }
+}

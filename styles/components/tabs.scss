@@ -1,0 +1,30 @@
+@use '../partials/colors';
+
+.ant-tabs {
+  .ant-tabs-nav {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-bottom: 24px;
+
+    &::before {
+      border-bottom: 4px solid map-get(colors.$colors, 'basic', '200');
+    }
+
+    .ant-tabs-tab {
+      font-size: 16px;
+      font-weight: bold;
+      color: map-get(colors.$colors, 'primary-1', 'transparent', '40');
+
+      &.ant-tabs-tab-active {
+        .ant-tabs-tab-btn {
+          color: map-get(colors.$colors, 'primary-1', '500');
+        }
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      height: 4px;
+      background: map-get(colors.$colors, 'primary-2', '300');
+    }
+  }
+}

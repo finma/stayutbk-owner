@@ -1,0 +1,164 @@
+
+// START CUSTOM ANT-INPUT STYLING
+@use '../partials/colors';
+.ant-input {
+  color: map-get(colors.$colors, 'basic', '700-a');
+  border-color: #F6F6F6; //Temporary using hex code, will change later.
+  border-radius: 6px;
+  height: 40px;
+  background-color: map-get(colors.$colors, 'basic', '200');
+  padding: 8px 16px;
+  &:focus,
+  &:hover {
+    border-color: #F6F6F6; //Temporary using hex code, will change later.
+    box-shadow: none;
+  }
+  &:hover {
+    background-color: map-get(colors.$colors, 'basic', '300');
+  }
+}
+
+.ant-input-status-error {
+  &:not(.ant-input-disabled) {
+    &:not(.ant-input-borderless) {
+      &.ant-input,
+      &.ant-input:hover {
+        background: #F1F3F6; //Temporary using hex code, will change later.
+        border-color: map-get(colors.$colors, 'magenta', '300');
+      }
+      &.ant-input:focus,
+      &.ant-input-focused {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.ant-input-number-group-wrapper {
+  width: 100%;
+  .ant-input-number-input {
+    height: 40px;
+    padding: 8px 16px;
+  }
+  .ant-input-number-group-addon {
+    padding: 0 16px;
+  }
+  &.no-number-handler {
+    .ant-input-number-handler-wrap {
+      display: none;
+    }
+  }
+  &.clear-addon {
+    .ant-input-number-group-addon {
+      background: transparent;
+      svg {
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+}
+
+.ant-input-affix-wrapper {
+  color: map-get(colors.$colors, 'basic', '700-a');
+  border-color: #F6F6F6; //Temporary using hex code, will change later.
+  border-radius: 6px;
+  height: 40px;
+  background-color: map-get(colors.$colors, 'basic', '200');
+  box-shadow: none;
+  padding: 8px 16px;
+  &:not(.ant-input-affix-wrapper-disabled) {
+    border-color: #F6F6F6; //Temporary using hex code, will change later.
+    &:focus,
+    &:hover {
+      border-color: #F6F6F6; //Temporary using hex code, will change later.
+      box-shadow: none ;
+    }
+    &:hover,
+    &:hover .ant-input {
+      background-color: map-get(colors.$colors, 'basic', '300');
+    }
+  }
+  
+  .ant-input {
+    height: 100%;
+  }
+
+  
+}
+
+.ant-input-affix-wrapper-status-error {
+  .ant-input-prefix {
+    color: map-get(colors.$colors, 'magenta', '300');
+  }
+  &:not(.ant-input-affix-wrapper-disabled) {
+    .ant-input-prefix {
+      color: map-get(colors.$colors, 'magenta', '300');
+    }
+    &:not(.ant-input-affix-wrapper-borderless) {
+      &.ant-input-affix-wrapper,
+      &.ant-input-affix-wrapper:hover {
+        background-color: #F1F3F6; //Temporary using hex code, will change later.
+        border-color: map-get(colors.$colors, 'magenta', '300');
+        
+        .ant-input {
+          background-color: #F1F3F6; //Temporary using hex code, will change later.
+        }
+      }
+      &.ant-input-affix-wrapper-focused,
+      &.ant-input-affix-wrapper:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.ant-input-password-icon {
+  cursor: pointer;
+  fill: map-get(colors.$colors, 'basic', '600');
+}
+
+.ant-input-affix-wrapper-disabled {
+  opacity: 0.4;
+  background: #FFF;
+  border: 1px solid map-get(colors.$colors, 'basic', '600');
+
+  .ant-input-prefix {
+    opacity: 0.4;
+  }
+}
+
+.ant-input-group-addon {
+  border-color: transparent;
+  border-radius: 6px;
+  background-color: map-get(colors.$colors, 'basic', '200');
+  box-shadow: none;
+
+}
+
+.ant-input-group-addon .ant-select.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  border-right: 1px solid map-get(colors.$colors, 'basic', '400');
+}
+
+// Custom class for input with background white
+// Add props className='bg-white' to use background white
+.bg-white {
+  background-color: map-get(colors.$colors, 'basic', '100');
+  border-radius: 6px;
+  
+  .ant-input, .ant-select-selector, .ant-input-group-addon {
+    background-color: map-get(colors.$colors, 'basic', '100');
+  }
+  
+  &.ant-select.ant-select-single {
+    .ant-select-selector {
+      background-color: map-get(colors.$colors, 'basic', '100');
+    }
+  }
+
+  &.ant-picker {
+    background-color: map-get(colors.$colors, 'basic', '100');
+  }
+}
+
+// END CUSTOM ANT-INPUT STYLING

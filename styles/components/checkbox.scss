@@ -1,0 +1,46 @@
+@use '../partials/colors';
+
+.ant-checkbox-wrapper:hover,
+.ant-checkbox:hover,
+.ant-checkbox-input:focus + {
+  .ant-checkbox-inner {
+    border-color: map-get(colors.$colors, 'cerulean-blue', '300');
+  }
+}
+
+.ant-checkbox + span {
+  padding: 0 9px;
+}
+
+.ant-checkbox-inner {
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #ECEDF1;
+  border-color: transparent;
+  &:after {
+    left: 25%;
+  }
+}
+
+.ant-checkbox-checked {
+  &:after {
+    border: 1px solid map-get(colors.$colors, 'cerulean-blue', '300');
+  }
+  .ant-checkbox-inner {
+    background-color: map-get(colors.$colors, 'cerulean-blue', '300');
+    border-color: map-get(colors.$colors, 'cerulean-blue', '300');
+  }
+}
+
+// custom background checkbox with color cerulean-blue
+.ant-checkbox-wrapper {
+  &.bg-blue {
+    .ant-checkbox:not(.ant-checkbox-checked) {
+      .ant-checkbox-inner {
+        background-color: map-get(colors.$colors, 'cerulean-blue', '100');
+      }
+    }
+  }
+}

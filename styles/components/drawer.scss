@@ -1,0 +1,18 @@
+// CUSTOM STYLING DRAWER SIDEBAR
+.sidebar-drawer {
+  &.ant-drawer {
+    z-index: 999;
+  }
+  &.ant-drawer-open {
+    left: 112px;
+  }
+}
+
+.second-sidebar-drawer {
+  &.ant-drawer {
+    z-index: 999;
+  }
+  &.ant-drawer-open {
+    left: 408px;
+  }
+}

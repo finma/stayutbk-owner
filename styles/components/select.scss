@@ -1,0 +1,157 @@
+@use '../partials/colors';
+
+.ant-select {
+  background: none;
+  width: 100%;
+  color: map-get(colors.$colors, 'basic', '700-a');
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-color: transparent;
+  border-radius: 6px;
+  background-color: map-get(colors.$colors, 'basic', '200-a');
+  padding: 0 32px 0 16px;
+}
+
+.ant-select.ant-select-single .ant-select-selector {
+  height: 40px;
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: transparent;
+}
+
+.ant-select-status-error.ant-select:not(.ant-select-disabled):not(.ant-select-customize-input) .ant-select-selector {
+  background-color: map-get(colors.$colors, 'basic', '200-a');
+  border-color: map-get(colors.$colors, 'magenta', '300') !important;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input {
+  height: 40px;
+}
+
+.ant-select-single .ant-select-selector .ant-select-selection-item, .ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+  line-height: 40px;
+}
+
+.ant-select-dropdown {
+  border-radius: 6px;
+  padding: 0;
+  .ant-select-item-option {
+    padding: 8px 16px;
+  }
+  &.select-with-checkbox {
+    .ant-select-item-option {
+      padding: 10px 14px;
+    }
+  }
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: map-get(colors.$colors, 'primary-1', '400');
+  color: map-get(colors.$colors, 'basic', '100');
+  font-weight: normal;
+  .ant-checkbox-wrapper {
+    .ant-checkbox + span {
+      color: #FFF;
+    }
+  }
+
+  .ant-select-item-option-content {
+    .ant-divider {
+      border-top: 2px dashed map-get(colors.$colors, 'basic', '100');
+      
+      &::before, &::after {
+        background-color: map-get(colors.$colors, 'basic', '100');
+      }
+    }
+    
+    // fill svg on selected item
+    svg {
+      path:last-child {
+        fill: map-get(colors.$colors, 'basic', '100')
+      }
+    }
+  }
+}
+
+// Select small size
+.ant-select-single.ant-select-sm:not(.ant-select-customize-input) .ant-select-selector {
+  height: 32px;
+  padding: 4px 16px;
+}
+
+// Multiple select custom styling
+.ant-select.ant-select-multiple {
+  .ant-select-selector {
+    min-height: 40px;
+    padding: 6px 30px 6px 16px;
+  }
+  
+  .ant-select-selection-item {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-inline-end: 4px;
+    height: auto;
+    background: #FFF;
+    border-radius: 6px;
+    padding: 5px;
+  }
+  .ant-select-selection-placeholder {
+    left: 16px;
+  }
+}
+
+.ant-select-item-group {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  height: 40px;
+  color: map-get(colors.$colors, 'primary-1', '500');
+
+  .custom-item-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    padding: 8px 16px;
+  
+    &.bg-green {
+      color: map-get(colors.$colors, 'primary-2', '400');
+      background-color: map-get(colors.$colors, 'primary-2', '200');
+    }
+
+    &.bg-blue {
+      color: map-get(colors.$colors, 'cerulean-blue', '300');
+      background-color: map-get(colors.$colors, 'cerulean-blue', '100');
+    }
+  }
+}
+
+.ant-select-item-option-disabled {
+  &.custom-disabled {
+    background-color:  map-get(colors.$colors, 'basic', '100');
+    cursor: default;
+    font-weight: bold;
+    color:  map-get(colors.$colors, 'primary-1', '500');
+  }
+}
+
+.ant-select-single .ant-select-selector .ant-select-selection-search {
+  left: 16px;
+}
+
+.ant-select-single.ant-select-show-arrow .ant-select-selection-search {
+  right: 32px;
+}
+
+.ant-select-arrow {
+  right: 16px;
+}

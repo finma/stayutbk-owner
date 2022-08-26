@@ -1,0 +1,76 @@
+@use '../partials/colors';
+
+.ant-modal-mask {
+  background-color: rgba(0, 0, 0, 0.16);
+}
+
+.ant-modal-content {
+  border-radius: 8px;
+  box-shadow: 2px 4px 12px 0 rgba(204,211,234,0.4);
+}
+
+.ant-modal-header {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-color: map-get(colors.$colors, 'basic', '300');
+}
+
+.ant-modal-title {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: bold;
+  color: map-get(colors.$colors, 'primary-1', '500');
+  .custom-modal-header {
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 20px;
+      line-height: 36px;
+      font-weight: bold;
+      color: map-get(colors.$colors, 'primary-1', '500');
+    }
+    svg {
+      margin-right: 8px;
+      path:last-child {
+        fill: map-get(colors.$colors, 'primary-1', '500');
+      }
+    }
+    
+    &.danger-header {
+      p {
+        color: map-get(colors.$colors, 'magenta', '300');
+      }
+      svg {
+        path:last-child {
+          fill: map-get(colors.$colors, 'magenta', '300');
+        }
+      }
+    }
+  }
+}
+
+.ant-modal-close {
+  top: 7px;
+}
+
+.ant-modal-body {
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    color: map-get(colors.$colors, 'basic', '700-a');
+    &.bold {
+      font-weight: bold;
+      color: map-get(colors.$colors, 'primary-1', '500');
+    }
+    &.small {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+.ant-modal-footer {
+  padding: 0 24px 24px;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}

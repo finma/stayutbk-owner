@@ -1,0 +1,182 @@
+@use 'partials/colors';
+// // Custom ant-input styling
+// @use 'components/card';
+// @use 'components/input';
+// @use 'components/message';
+// @use 'components/picker';
+// @use 'components/select';
+// @use 'components/switch';
+// @use 'components/radio';
+// @use 'components/table';
+// @use 'components/tabs';
+// @use 'components/tooltip';
+// @use 'components/modal';
+// @use 'components/checkbox';
+// @use 'components/drawer';
+// @use 'components/treeselect';
+// @use 'components/popover';
+// @use 'components/search';
+// @use 'components/steps';
+// @use 'components/dropdown';
+// @use 'components/rate';
+
+// @use 'components/upload-image-list';
+
+// // Text editor custom styling
+// @use 'components/text-editor';
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../public/fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+    url('../public/fonts/HelveticaNeue-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../public/fonts/HelveticaNeue.woff2') format('woff2'),
+    url('../public/fonts/HelveticaNeue.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: map-get(colors.$colors, 'basic', '200');
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: map-get(colors.$colors, 'basic', '300');
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: map-get(colors.$colors, 'basic', '600');
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: map-get(colors.$colors, 'basic', '700-a');
+}
+
+.ant-card-actions {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.ant-space {
+  display: flex;
+}
+
+.ant-form-item-explain-error {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  color: map-get(colors.$colors, 'magenta', '300');
+}
+
+.ant-alert {
+  border: none;
+  border-radius: 6px;
+  padding: 16px;
+  align-items: baseline;
+
+  .ant-alert-icon {
+    position: relative;
+    top: 4px;
+    margin-right: 6px;
+  }
+
+  &.ant-alert-error {
+    background: rgba(212, 12, 116, 0.16);
+
+    .ant-alert-message {
+      color: map-get(colors.$colors, 'magenta', '300');
+    }
+
+    .ant-alert-icon {
+      path:last-child {
+        fill: map-get(colors.$colors, 'magenta', '300');
+      }
+    }
+  }
+
+  &.ant-alert-note {
+    background: map-get(colors.$colors, 'basic', '200');
+    padding: 16px 24px;
+  }
+}
+
+.ant-form-vertical {
+  .ant-form-item-label {
+    >label {
+      width: 100%;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: bold;
+    }
+  }
+}
+
+.ant-breadcrumb {
+  color: rgba(92, 98, 102, 0.45);
+  font-size: 12px;
+  line-height: 18px;
+
+  .ant-breadcrumb-separator {
+    color: rgba(92, 98, 102, 0.45);
+    margin: 0 4px;
+  }
+
+  li:last-child {
+    color: map-get(colors.$colors, 'basic', '700-a');
+  }
+}
+
+.ant-tooltip {
+  .ant-tooltip-inner {
+    border-radius: 4px;
+    padding: 14px;
+  }
+}

@@ -1,0 +1,14 @@
+@use '../partials/colors';
+
+.ant-dropdown {
+  .ant-dropdown-menu {
+    border-radius: 6px;
+    padding: 0;
+
+    .ant-dropdown-menu-item-selected {
+      font-weight: normal;
+      background-color: map-get(colors.$colors, 'primary-1', '400');
+      color: map-get(colors.$colors, 'basic', '100');
+    }
+  }
+}

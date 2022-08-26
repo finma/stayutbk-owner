@@ -1,0 +1,8 @@
+// START CUSTOM ANT-INPUT STYLING
+@use '../partials/colors';
+
+.ant-rate {
+  .ant-rate-star {
+    font-size: 32px;
+  }
+}

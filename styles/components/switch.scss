@@ -1,0 +1,65 @@
+@use '../partials/colors';
+
+// START CUSTOM SWITCH
+.ant-switch {
+  height: 32px;
+  min-width: 52px;
+  background: #EAECEF;
+  border: 1px solid #EAECEF;
+  .ant-switch-handle {
+    height: 28px;
+    width: 28px;
+    left: 1px;
+    top: 1px;
+    &:before {
+      border-radius: 100px;
+      box-shadow: none;
+    }
+  }
+
+  &:not(.ant-switch-disabled) {
+    &:hover {
+      border-color: map-get(colors.$colors, 'cerulean-blue', '400');
+    }
+  }
+  
+  &.ant-switch-checked {
+    background: map-get(colors.$colors, 'cerulean-blue', '300');
+    border-color: map-get(colors.$colors, 'cerulean-blue', '300');
+    &:not(.ant-switch-disabled) {
+      &:hover {
+        background: map-get(colors.$colors, 'cerulean-blue', '400');
+        border-color: map-get(colors.$colors, 'cerulean-blue', '400');
+      }
+    }
+    .ant-switch-handle {
+      left: calc(100% - 29px);
+    }
+    
+    /* ============== CUSTOM DISABLED BASED ON LUNACY ============== */
+    
+    // &.ant-switch-disabled {
+    //   background: map-get(colors.$colors, 'basic', '500');
+    //   border-color: map-get(colors.$colors, 'basic', '500');
+    //   .ant-switch-handle {
+    //     &:before {
+    //       background: map-get(colors.$colors, 'basic', '300');
+    //     }
+    //   }
+    // }
+  }
+  
+  /* ============== CUSTOM DISABLED BASED ON LUNACY ============== */
+  
+  // &.ant-switch-disabled {
+  //   opacity: 1;
+  //   background: map-get(colors.$colors, 'basic', '300');
+  //   border: 1px solid map-get(colors.$colors, 'basic', '300');
+  //   .ant-switch-handle {
+  //     &:before {
+  //       background: map-get(colors.$colors, 'basic', '500');
+  //     }
+  //   }
+  // }
+}
+// END CUSTOM SWITCH

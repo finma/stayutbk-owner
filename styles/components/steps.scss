@@ -1,0 +1,162 @@
+@use '../partials/colors';
+
+.ant-steps {
+  .ant-steps-item-container {
+    display: flex;
+
+    .ant-steps-item-content {
+      color: map-get(colors.$colors, 'cerulean-blue', '400');
+      
+      .ant-steps-item-title {
+        font-size: 12px;
+        line-height: 16px;
+        color: map-get(colors.$colors, 'cerulean-blue', 'transparent', '40');
+      }
+
+      .ant-steps-item-description {
+        font-size: 14px;
+        line-height: 22px;
+        color: map-get(colors.$colors, 'cerulean-blue', '400');
+      }
+    }
+  }
+}
+
+.ant-steps-navigation .ant-steps-item.ant-steps-item-active::before {
+  display: none;
+}
+
+.ant-steps-small .ant-steps-item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: map-get(colors.$colors, 'basic', '200-a');
+  border: none;
+
+  .ant-steps-icon {
+    font-size: 18px;
+  }
+}
+
+.ant-steps-item {
+  &.ant-steps-item-active,  &.ant-steps-item-process{
+    .ant-steps-item-icon {
+      color: map-get(colors.$colors, 'basic', '100');
+      background-color: map-get(colors.$colors, 'cerulean-blue', '300');
+    }
+  }
+
+  &.ant-steps-item-wait {
+    &:hover {
+      color: map-get(colors.$colors, 'cerulean-blue', '400');
+    }
+
+    .ant-steps-item-icon {
+      background-color: map-get(colors.$colors, 'basic', '200-a');
+      
+      .ant-steps-icon {
+        color: map-get(colors.$colors, 'cerulean-blue', '400');
+      }
+    }
+  }
+
+  &.ant-steps-item-finish {
+    .ant-steps-item-icon {
+      background-color: map-get(colors.$colors, 'basic', '100');
+      border: 1px solid map-get(colors.$colors, 'cerulean-blue', 300);
+      
+      .ant-steps-icon {
+        color: map-get(colors.$colors, 'cerulean-blue', '400');
+      }
+    }
+  }
+}
+
+.ant-steps-item-container {
+  &:hover {
+    color: map-get(colors.$colors, 'basic', '400');
+  }
+}
+
+.ant-steps:not(.ant-steps-vertical) .ant-steps-item-custom {
+  .ant-steps-item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  
+    .ant-steps-icon {
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        margin-right: 2px;
+      }
+    }
+
+  }
+  
+  &.ant-steps-item-active,  &.ant-steps-item-process{
+    .ant-steps-item-icon {
+      background-color: map-get(colors.$colors, 'cerulean-blue', '300');
+
+      .ant-steps-icon {
+        color: map-get(colors.$colors, 'basic', '100');
+      }
+    }
+  }
+
+  &.ant-steps-item-finish {
+    .ant-steps-item-icon {
+      background-color: map-get(colors.$colors, 'basic', '100');
+      border: 1px solid map-get(colors.$colors, 'cerulean-blue', '300');
+
+      .ant-steps-icon {
+        color: map-get(colors.$colors, 'basic', '100');
+        
+        svg {
+          path:last-child {
+            fill: map-get(colors.$colors, 'cerulean-blue', '300');
+          }
+        }
+      }
+    }
+  }
+
+  &.ant-steps-item-wait {
+    .ant-steps-item-icon {
+      background-color: map-get(colors.$colors, 'basic', '200-a');
+
+      .ant-steps-icon {
+        color: map-get(colors.$colors, 'cerulean-blue', '400');
+        
+        svg {
+          path:last-child {
+            fill: map-get(colors.$colors, 'cerulean-blue', '300');
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-steps-navigation {
+  .ant-steps-item {
+    &::after {
+      width: 70px;
+      height: 70px;
+      margin-top: -40px;
+      margin-left: -70px;
+      border-top: 1px solid map-get(colors.$colors, 'basic', '200-a');
+      border-right: 1px solid map-get(colors.$colors, 'basic', '200-a');
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@use '../partials/colors';
+
+.ant-card-head-title {
+  padding: 32px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 27px;
+  text-align: center;
+  color: map-get(colors.$colors, 'primary-1', '500');
+}

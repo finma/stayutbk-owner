@@ -1,0 +1,81 @@
+// START CUSTOM ANT-INPUT STYLING
+@use '../partials/colors';
+
+.ant-radio-wrapper {
+  color: map-get(colors.$colors, 'basic', '700-a');
+  min-height: 20px;
+  align-items: normal;
+  margin: 0;
+  
+  .ant-radio {
+    top: 1px;
+    width: 20px;
+    height: 20px;
+
+      &:hover {
+        border-color: map-get(colors.$colors, 'cerulean-blue', '300') !important ;
+      }
+    
+    .ant-radio-inner {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background-color: map-get(colors.$colors, 'basic', '200-a') !important ;
+
+      &:hover {
+        border-color: map-get(colors.$colors, 'cerulean-blue', '300') !important ;
+      }
+
+      &:after {
+        width: 26px;
+        height: 26px;
+        margin-top: -13px;
+        margin-left: -13px;
+        background-color: map-get(colors.$colors, 'cerulean-blue', '300') !important ;
+      }
+    }
+  } 
+}
+
+.ant-radio-group-solid {
+  border: none;
+}
+
+.ant-radio-button-wrapper {
+  padding: 4px 14px 14px 14px;
+  background-color: map-get(colors.$colors, 'basic', '200-a');
+  border: none;
+  height: 40px;
+  
+  &:hover {
+    color: map-get(colors.$colors, 'cerulean-blue', '300');
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.ant-radio-button-wrapper:not(:first-child)::before {
+  width: 0;
+}
+
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  border: none;
+  background-color: map-get(colors.$colors, 'cerulean-blue', '300');
+
+  &:hover {
+      background-color: map-get(colors.$colors, 'cerulean-blue', '400');
+  }
+}
+
+.ant-radio-button-wrapper:first-child {
+  border: none;
+  border-radius: 6px 0 0 6px;
+}
+
+.ant-radio-button-wrapper:last-child {
+  border: none;
+  border-radius: 0 6px 6px 0;
+}
