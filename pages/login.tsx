@@ -61,7 +61,7 @@ const Login: NextPage = () => {
                 layout="vertical"
                 scrollToFirstError
               >
-                <Space direction="vertical" size={16}>
+                <Space direction="vertical" size={32}>
                   <Space direction="vertical" size={16}>
                     <Form.Item
                       style={{ marginBottom: "0" }}
