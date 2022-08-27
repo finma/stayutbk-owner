@@ -21,8 +21,8 @@ const BaseSidebar = () => {
       icon: <HiOutlineViewGrid />,
     },
     {
-      label: "User",
-      key: "user",
+      label: "Users",
+      key: "users",
       icon: <HiOutlineUsers />,
     },
     {
@@ -49,8 +49,8 @@ const BaseSidebar = () => {
   }, [router.asPath]);
 
   const handleRoute = (e: any) => {
-    if (e.key === "user") {
-      router.push("/user/user");
+    if (e.key === "users") {
+      router.push("/users/user");
     } else {
       router.push("/" + e.key);
     }

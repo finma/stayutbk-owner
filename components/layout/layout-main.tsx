@@ -36,7 +36,7 @@ const LayoutMain: FC<LayoutProps> = ({ children, title }) => {
         <BaseSidebar />
         <Layout>
           <BaseHeader />
-          {currentPage && currentPage === "user" ? (
+          {currentPage && currentPage === "users" ? (
             <Layout>
               <UserSidebar />
               <Content

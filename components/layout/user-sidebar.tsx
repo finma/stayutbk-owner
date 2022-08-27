@@ -20,12 +20,12 @@ const UserSidebar = () => {
         {
           subTitle: "User",
           id: "user",
-          link: "/user/user",
+          link: "/users/user",
         },
         {
           subTitle: "Student",
           id: "student",
-          link: "/user/student",
+          link: "/users/student",
         },
       ],
     },
