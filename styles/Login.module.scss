@@ -1,0 +1,37 @@
+@use 'partials/colors';
+
+.main {
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: map-get(colors.$colors, 'basic', '200');
+}
+
+.container {
+  padding: 32px;
+}
+
+.card {
+  background-color: map-get(colors.$colors, 'basic', '100');
+  padding: 32px;
+  padding-top: 40px;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 464px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 88px;
+}
+
+.space {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.h3 {
+  font-size: 22px;
+  line-height: 27px;
+}
