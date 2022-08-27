@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Layout, Menu } from "antd";
-import { HiOutlineUsers, HiOutlineViewGrid } from "react-icons/hi";
+import {
+  HiOutlineBookOpen,
+  HiOutlineCurrencyDollar,
+  HiOutlineUsers,
+  HiOutlineViewGrid,
+} from "react-icons/hi";
 
 import styles from "../../styles/Sidebar.module.scss";
 
@@ -19,6 +24,16 @@ const BaseSidebar = () => {
       label: "User",
       key: "user",
       icon: <HiOutlineUsers />,
+    },
+    {
+      label: "Quiz",
+      key: "quiz",
+      icon: <HiOutlineBookOpen />,
+    },
+    {
+      label: "Transactions",
+      key: "transactions",
+      icon: <HiOutlineCurrencyDollar />,
     },
   ];
 

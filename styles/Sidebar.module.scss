@@ -28,13 +28,6 @@
     padding-top: 32px;
     border: none;
     
-    svg {
-      margin-bottom: 5px;
-      path:last-child {
-        fill: #FFF;
-      }
-    }
-    
     :global {
       .ant-menu-item {
         display: flex;
@@ -72,11 +65,6 @@
         &:after {
           content: none;
         }
-        svg {
-          path:last-child {
-            fill: map-get(colors.$colors, 'primary-2', '300');
-          }
-        }
       }
     }
   }
@@ -105,13 +93,6 @@
           display: flex;
         }
         
-        svg {
-          margin-right: 8px;
-          path:last-child {
-            fill: map-get(colors.$colors, 'primary-1', '500');
-          }
-        }
-        
         span {
           @include text-overflow(1);
           color: map-get(colors.$colors, 'basic', '700-a');
@@ -123,9 +104,7 @@
         
         &.active-item {
           background: map-get(colors.$colors, 'basic', '200');
-          svg path:last-child {
-            fill: map-get(colors.$colors, 'primary-2', '300');
-          }
+
           span {
             color: map-get(colors.$colors, 'primary-2', '300');
           }
