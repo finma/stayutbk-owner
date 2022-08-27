@@ -4,6 +4,7 @@ import { Layout, Menu } from "antd";
 import {
   HiOutlineBookOpen,
   HiOutlineCurrencyDollar,
+  HiOutlineUserGroup,
   HiOutlineUsers,
   HiOutlineViewGrid,
 } from "react-icons/hi";
@@ -29,6 +30,11 @@ const BaseSidebar = () => {
       label: "Quiz",
       key: "quiz",
       icon: <HiOutlineBookOpen />,
+    },
+    {
+      label: "Roles",
+      key: "roles",
+      icon: <HiOutlineUserGroup />,
     },
     {
       label: "Transactions",
