@@ -1,4 +1,3 @@
-
 // START CUSTOM ANT-INPUT STYLING
 @use '../partials/colors';
 .ant-input {
@@ -8,10 +7,12 @@
   height: 40px;
   background-color: map-get(colors.$colors, 'basic', '200');
   padding: 8px 16px;
+  border: none;
   &:focus,
   &:hover {
     border-color: #F6F6F6; //Temporary using hex code, will change later.
     box-shadow: none;
+    border: none;
   }
   &:hover {
     background-color: map-get(colors.$colors, 'basic', '300');
@@ -67,12 +68,14 @@
   background-color: map-get(colors.$colors, 'basic', '200');
   box-shadow: none;
   padding: 8px 16px;
+  border: none;
   &:not(.ant-input-affix-wrapper-disabled) {
     border-color: #F6F6F6; //Temporary using hex code, will change later.
     &:focus,
     &:hover {
       border-color: #F6F6F6; //Temporary using hex code, will change later.
       box-shadow: none ;
+      border: none;
     }
     &:hover,
     &:hover .ant-input {
