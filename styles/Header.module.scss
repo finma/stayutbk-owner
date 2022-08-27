@@ -1,0 +1,160 @@
+@use 'partials/colors';
+
+@mixin text-overflow($line) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+.base-header {
+  background: #FFF;
+  height: 65px;
+  padding: 12px 24px;
+  .header-button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 6px;
+    border-color: map-get(colors.$colors, 'basic', '200-a');
+    background: map-get(colors.$colors, 'basic', '200-a');
+    color: map-get(colors.$colors, 'basic', '700-a');
+    font-size: 20px;
+    &:hover, &:focus {
+      border-color: map-get(colors.$colors, 'basic', '700-a');
+    }
+  }
+  
+  :global {
+    .ant-page-header-heading-left,
+    .ant-page-header-heading-extra {
+      margin: 0;
+    }
+    .ant-page-header-heading-title {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 22px;
+      color: map-get(colors.$colors, 'primary-1', '500');
+    }
+
+    .ant-dropdown-menu-sub {
+      .ant-dropdown-menu-item {
+        padding: 12px 24px;
+      }
+    }
+  }
+}
+
+.dropdown-profile {
+  width: 300px;
+  top: 75px !important;
+  border-radius: 8px;
+  
+  :global {
+    .ant-dropdown-menu {
+      border-radius: 8px;
+      padding-top: 0;
+      padding-bottom: 16px;
+    }
+    .ant-dropdown-menu-item {
+      padding: 10px 24px;
+      &:first-child {
+        cursor: default;
+        pointer-events: none;
+        &:hover {
+          background: #FFF;
+        }
+      }
+    }
+
+    .ant-dropdown-menu-submenu {
+      padding: 0;
+
+      .ant-dropdown-menu-submenu-title {
+        padding: 10px 24px;
+      }
+
+      .ant-dropdown-menu-submenu-expand-icon {
+        top: 0;
+        padding: 10px;
+      }
+    }
+
+    .ant-dropdown-menu-item-divider {
+      margin: 0 0 16px;
+    }
+  }
+}
+
+.selectHotel {
+  // padding: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  color: map-get(colors.$colors, 'primary-1', 'transparent', '40');
+}
+
+.hotel-item {
+  padding: 12px;
+}
+
+.profile-section {
+  padding: 14px 0;
+  .profile-name {
+    @include text-overflow(1);
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: map-get(colors.$colors, 'primary-1', '500');
+  }
+  .profile-email {
+    @include text-overflow(1);
+    font-size: 12px;
+    line-height: 18px;
+    color: map-get(colors.$colors, 'basic', '700-a');
+  }
+  
+  .profile-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: map-get(colors.$colors, 'basic', '200-a');
+    position: relative;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      color: map-get(colors.$colors, 'basic', '700-a');
+      font-weight: 700;
+    }
+  }
+}
+
+.menu-item {
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: map-get(colors.$colors, 'basic', '700-a') !important;
+  svg {
+    margin-right: 8px;
+  }
+  &.item-logout {
+    color: map-get(colors.$colors, 'magenta', '300') !important;
+    svg {
+      path:last-child {
+        fill: map-get(colors.$colors, 'magenta', '300') !important;
+      }
+    }
+  }
+}
+
+.modalButtons {
+  justify-content: flex-end;
+}
+
+.rate {
+  text-align: center;
+}

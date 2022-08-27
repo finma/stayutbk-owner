@@ -1,0 +1,195 @@
+@use 'partials/colors';
+
+@mixin text-overflow($line) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+.main-sidebar {
+  background: map-get(colors.$colors, 'primary-1', '400');
+  padding: 16px;
+  color: #FFF;
+  z-index: 1000;
+  
+  :global {
+    .ant-layout-sider-children {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  .sidebar-wrapper {
+    background: map-get(colors.$colors, 'primary-1', '400');
+    color: #FFF;
+    padding-top: 32px;
+    border: none;
+    
+    svg {
+      margin-bottom: 5px;
+      path:last-child {
+        fill: #FFF;
+      }
+    }
+    
+    :global {
+      .ant-menu-item {
+        display: flex;
+        flex-direction: column;
+        width: 80px;
+        height: 80px;
+        padding: 0 !important;
+        margin: 0;
+        justify-content: center;
+        border-radius: 8px;
+        .ant-menu-title-content {
+          margin: 0;
+          font-size: 12px;
+          line-height: 16px;
+          flex: none;
+          text-align: center;
+          white-space: normal;
+          @include text-overflow(2);
+        }
+        
+        &:hover,
+        &:active {
+          background-color: rgba($color: #FFF, $alpha: 0.16);
+          color: #FFF;
+        }
+      }
+      
+      .ant-menu-item-divider {
+        margin: 100px 0 0;
+      }
+      
+      .ant-menu-item-selected {
+        background-color: rgba($color: #FFF, $alpha: 0.16);
+        color: map-get(colors.$colors, 'primary-2', '300') !important;
+        &:after {
+          content: none;
+        }
+        svg {
+          path:last-child {
+            fill: map-get(colors.$colors, 'primary-2', '300');
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar-drawer {
+  display: block;
+  :global {
+    .ant-drawer-header {
+      padding: 14px 16px;
+      border-radius: 0;
+      border: none;
+    }
+    .ant-drawer-body {
+      padding: 0 16px 16px;
+      .ant-list-item {
+        padding: 8px 10px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        
+        .sidebar-link {
+          font-size: 14px;
+          line-height: 22px;
+          align-items: center;
+          display: flex;
+        }
+        
+        svg {
+          margin-right: 8px;
+          path:last-child {
+            fill: map-get(colors.$colors, 'primary-1', '500');
+          }
+        }
+        
+        span {
+          @include text-overflow(1);
+          color: map-get(colors.$colors, 'basic', '700-a');
+        }
+        
+        &:hover {
+          background: map-get(colors.$colors, 'basic', '200');
+        }
+        
+        &.active-item {
+          background: map-get(colors.$colors, 'basic', '200');
+          svg path:last-child {
+            fill: map-get(colors.$colors, 'primary-2', '300');
+          }
+          span {
+            color: map-get(colors.$colors, 'primary-2', '300');
+          }
+        }
+      }
+    }
+    .ant-drawer-title {
+      @include text-overflow(2);
+      color: map-get(colors.$colors, 'primary-1', '500');
+      font-weight: bold;
+      line-height: 36px;
+      font-size: 18px;
+    }
+  }
+}
+
+.setting-sidebar {
+  background: #FFF;
+  padding: 6px 16px 16px 6px;
+  box-shadow: 1px 0 0 0 #E9ECEF, 1px 0 0 0 #E9ECEF;
+  .setting-sub-item {
+    width: 100%;
+    :global {
+      .ant-list {
+        padding-left: 10px;
+      }
+      .ant-list-item {
+        padding: 8px 6px 8px 28px;
+        border-radius: 6px;
+        color: map-get(colors.$colors, 'basic', '700-a');
+        line-height: 22px;
+        border-bottom: none;
+        cursor: pointer;
+        &:hover {
+          background: map-get(colors.$colors, 'basic', '200');
+        }
+        &.active-item {
+          cursor: default;
+          background: map-get(colors.$colors, 'basic', '200');
+          color: map-get(colors.$colors, 'primary-2', '300');
+        }
+      }
+    }
+  }
+  .sub-item-title {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+    color: map-get(colors.$colors, 'primary-1', '500');
+    padding: 10px;
+    svg {
+      margin-right: 8px;
+      path:last-child {
+        fill: map-get(colors.$colors, 'primary-1', '500');
+      }
+    }
+  }
+  
+  :global {
+    .ant-list-item {
+      padding: 0;
+      border-bottom: none;
+    }
+  }
+}
