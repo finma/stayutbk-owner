@@ -2,16 +2,14 @@ import { EyeInvisibleOutlined, EyeOutlined } from "@ant-design/icons";
 import { Alert, Button, Divider, Form, Input, Space } from "antd";
 import classNames from "classnames";
 import type { NextPage } from "next";
-import Link from "next/link";
 import { useState } from "react";
 
-import styles from "../styles/Login.module.scss";
+import styles from "@/styles/Login.module.scss";
 
 const Login: NextPage = () => {
   const [isSubmitting, setSubmitting] = useState(false);
   const [isError, setError] = useState(false);
   const [unregisteredEmail, setUnregisteredEmail] = useState(false);
-  const [errMsg, setErrMsg] = useState();
   const [form] = Form.useForm();
 
   const onFinishFailed = (err: any) => {

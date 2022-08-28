@@ -4,7 +4,7 @@ import { NextPage } from "next";
 import type { AppProps } from "next/app";
 
 import "antd/dist/antd.css";
-import "../styles/globals.scss";
+import "@/styles/globals.scss";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;

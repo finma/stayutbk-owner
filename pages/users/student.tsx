@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
-import LayoutMain from "../../components/layout/layout-main";
-import PageTitle from "../../components/page-title";
+import LayoutMain from "@/components/layout/layout-main";
+import PageTitle from "@/components/page-title";
 
 const StudentPage = () => {
   return (
