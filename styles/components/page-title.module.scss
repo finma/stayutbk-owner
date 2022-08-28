@@ -1,0 +1,26 @@
+@use '../partials/colors';
+@use '../partials/typography';
+
+.title {
+  @include typography.h3;
+
+  font-size: 20px;
+  color: map-get(colors.$colors, 'primary-1', '500');
+  text-transform: capitalize;
+}
+
+.separator {
+  border-left: 1.5px solid map-get(colors.$colors, 'basic', '400');
+  height: 20px;
+  margin-left: 12px;
+}
+
+.learnToUse {
+  color: map-get(colors.$colors, 'primary-1', '500');
+}
+
+.breadcrumbs {
+  @include typography.c1;
+
+  color: map-get(colors.$colors, 'basic', '700-a');
+}
