@@ -1,12 +1,13 @@
 import { ReactElement } from "react";
+
 import LayoutMain from "../../components/layout/layout-main";
+import PageTitle from "../../components/page-title";
 
 const QuizPage = () => {
   return (
-    <div>
-      <h1>Quiz</h1>
-      <p>This is the Quiz page</p>
-    </div>
+    <>
+      <PageTitle title="Quiz" breadcrumbs="Home - Quiz" />
+    </>
   );
 };
 
