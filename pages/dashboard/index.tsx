@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 
 import LayoutMain from "../../components/layout/layout-main";
-import PageTitle from "../../components/page-header";
+import PageTitle from "../../components/page-title";
 
 const Dashboard = () => {
   return (
