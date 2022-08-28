@@ -1,11 +1,13 @@
 import { ReactElement } from "react";
+
 import LayoutMain from "../../components/layout/layout-main";
+import PageTitle from "../../components/page-title";
 
 const StudentPage = () => {
   return (
-    <div>
-      <h1>Student Page</h1>
-    </div>
+    <>
+      <PageTitle title="Stundent" breadcrumbs="Home - Users - Stundent" />
+    </>
   );
 };
 
