@@ -1,11 +1,12 @@
 import type { ReactElement } from "react";
 
 import LayoutMain from "../../components/layout/layout-main";
+import PageTitle from "../../components/page-header";
 
 const Dashboard = () => {
   return (
     <>
-      <h1>Dashboard</h1>
+      <PageTitle title="Dashboard" breadcrumbs="Home - Dashboard" />
     </>
   );
 };
