@@ -6,7 +6,7 @@ import PageTitle from "@/components/page-title";
 const UserPage = () => {
   return (
     <>
-      <PageTitle title="Users" breadcrumbs="Home - Users - User" />
+      <PageTitle title="Users" breadcrumbs="Home - User Management - User" />
     </>
   );
 };

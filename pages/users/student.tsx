@@ -6,7 +6,10 @@ import PageTitle from "@/components/page-title";
 const StudentPage = () => {
   return (
     <>
-      <PageTitle title="Stundent" breadcrumbs="Home - Users - Stundent" />
+      <PageTitle
+        title="Stundent"
+        breadcrumbs="Home - User Management - Stundent"
+      />
     </>
   );
 };

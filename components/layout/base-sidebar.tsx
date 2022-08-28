@@ -32,11 +32,6 @@ const BaseSidebar = () => {
       icon: <HiOutlineBookOpen />,
     },
     {
-      label: "Roles",
-      key: "roles",
-      icon: <HiOutlineUserGroup />,
-    },
-    {
       label: "Transactions",
       key: "transactions",
       icon: <HiOutlineCurrencyDollar />,

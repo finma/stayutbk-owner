@@ -27,6 +27,11 @@ const UserSidebar = () => {
           id: "student",
           link: "/users/student",
         },
+        {
+          subTitle: "Roles",
+          id: "roles",
+          link: "/users/roles",
+        },
       ],
     },
   ];
